@@ -1,0 +1,602 @@
+/* ============================================================
+   TASBEEH LANDING — RESPONSIVE STYLESHEET
+   Strategy: Mobile-first. We define the base in style.css
+   (which is already mobile-friendly) and progressively
+   enhance for larger screens here.
+
+   Breakpoints:
+   --bp-sm:  480px   (large phones)
+   --bp-md:  768px   (tablets)
+   --bp-lg:  1024px  (laptops)
+   --bp-xl:  1280px  (desktops)
+   --bp-2xl: 1536px  (large screens)
+   ============================================================ */
+
+/* ============================================================
+   1. MOBILE BASE — Default (< 480px)
+   Everything here targets the smallest screens first.
+   ============================================================ */
+
+/* Navigation */
+.nav__links  { display: none; }
+.nav__cta    { display: none; }
+.nav__hamburger { display: flex; }
+
+/* Hero */
+.hero__cta {
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--sp-3);
+}
+
+.hero__cta .btn {
+  width: 100%;
+  justify-content: center;
+}
+
+/* Features */
+.features__grid {
+  grid-template-columns: 1fr;
+  gap: var(--sp-4);
+}
+
+/* Phone Mockup */
+.mockup__stage {
+  flex-direction: column;
+  gap: var(--sp-8);
+}
+
+.mockup__info {
+  max-width: 100%;
+  width: 100%;
+}
+
+.mockup__info-item {
+  flex-direction: row;
+}
+
+.phone__screen {
+  width: 240px;
+  height: 533px;
+}
+
+.phone__frame {
+  inset: -10px -7px;
+  border-radius: 40px;
+}
+
+/* Gallery */
+.gallery__grid {
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--sp-3);
+}
+
+.gallery__grid .gallery__item:nth-child(5) {
+  grid-column: span 2;
+  max-height: 220px;
+  aspect-ratio: unset;
+}
+
+.gallery__grid .gallery__item:nth-child(5) img {
+  object-position: center 20%;
+}
+
+/* Why */
+.why__pillar {
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+.why__pillar-num {
+  font-size: var(--text-3xl);
+  min-width: auto;
+  text-align: start;
+}
+
+/* Stats */
+.stats__grid {
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--sp-2);
+}
+
+.stat {
+  padding: var(--sp-6) var(--sp-4);
+}
+
+.stat__number {
+  font-size: var(--text-5xl);
+}
+
+/* Reviews */
+.reviews__grid {
+  grid-template-columns: 1fr;
+  gap: var(--sp-4);
+}
+
+/* CTA buttons */
+.cta__buttons {
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--sp-3);
+  width: 100%;
+  max-width: 360px;
+}
+
+.cta__buttons .btn {
+  width: 100%;
+  justify-content: center;
+}
+
+/* Footer */
+.footer__top {
+  grid-template-columns: 1fr;
+  gap: var(--sp-10);
+}
+
+.footer__nav {
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--sp-6);
+}
+
+.footer__bottom {
+  flex-direction: column;
+  text-align: center;
+  gap: var(--sp-2);
+}
+
+/* Share modal */
+.share-modal__options {
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--sp-2);
+}
+
+/* Hide cursor dot on touch */
+#cursorDot { display: none; }
+
+/* ============================================================
+   2. SMALL PHONES — max 360px
+   ============================================================ */
+@media (max-width: 360px) {
+  .hero__icon { width: 96px; height: 96px; }
+  .hero__icon-wrap { width: 96px; height: 96px; }
+  .hero__bismillah { font-size: 1.6rem; }
+
+  .share-modal__options {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--sp-3);
+  }
+
+  .share-option__icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .stats__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .stat__number { font-size: var(--text-4xl); }
+}
+
+/* ============================================================
+   3. LARGE PHONES — 480px+
+   ============================================================ */
+@media (min-width: 480px) {
+
+  /* Hero CTA — two in a row, one below */
+  .hero__cta {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero__cta .btn {
+    width: auto;
+  }
+
+  /* Gallery — 3 columns */
+  .gallery__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--sp-4);
+  }
+
+  .gallery__grid .gallery__item:nth-child(5) {
+    grid-column: auto;
+    aspect-ratio: 9/16;
+    max-height: unset;
+  }
+
+  /* Features — 2 columns */
+  .features__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--sp-5);
+  }
+}
+
+/* ============================================================
+   4. TABLETS — 768px+
+   ============================================================ */
+@media (min-width: 768px) {
+
+  /* Nav — show links, hide hamburger */
+  .nav__links    { display: flex; }
+  .nav__hamburger { display: none; }
+  .nav__cta      { display: inline-flex; }
+  .nav__mobile   { display: none !important; }
+
+  /* Hero — more spacious */
+  .hero__content { gap: var(--sp-8); }
+  .hero__icon { width: 120px; height: 120px; }
+  .hero__icon-wrap { width: 120px; height: 120px; }
+
+  /* Features — 2 columns */
+  .features__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--sp-6);
+  }
+
+  /* Phone mockup — side by side */
+  .mockup__stage {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--sp-12);
+  }
+
+  .mockup__info {
+    max-width: 280px;
+  }
+
+  .phone__screen {
+    width: 260px;
+    height: 578px;
+    border-radius: 32px;
+  }
+
+  /* Gallery — 4 columns */
+  .gallery__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .gallery__grid .gallery__item:nth-child(5) {
+    grid-column: auto;
+    aspect-ratio: 9/16;
+    max-height: unset;
+  }
+
+  /* Why — single column stays, but more padding */
+  .why__pillar {
+    flex-direction: row;
+    gap: var(--sp-6);
+    align-items: flex-start;
+  }
+
+  .why__pillar-num {
+    font-size: var(--text-4xl);
+    min-width: 56px;
+  }
+
+  /* Stats — 4 columns */
+  .stats__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .stat__number { font-size: var(--text-6xl); }
+
+  /* Reviews — 2 columns (3rd wraps) */
+  .reviews__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* CTA buttons */
+  .cta__buttons {
+    flex-direction: row;
+    align-items: center;
+    max-width: none;
+  }
+
+  .cta__buttons .btn { width: auto; }
+
+  /* Footer */
+  .footer__top {
+    grid-template-columns: 240px 1fr;
+    gap: var(--sp-12);
+  }
+
+  .footer__nav {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer__bottom {
+    flex-direction: row;
+    text-align: start;
+  }
+
+  /* Show cursor dot */
+  #cursorDot { display: block; }
+}
+
+/* ============================================================
+   5. LAPTOPS — 1024px+
+   ============================================================ */
+@media (min-width: 1024px) {
+
+  /* Features — 3 columns */
+  .features__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--sp-6);
+  }
+
+  /* Phone mockup */
+  .mockup__stage { gap: var(--sp-20); }
+
+  .phone__screen {
+    width: 280px;
+    height: 560px;
+  }
+
+  .phone__frame {
+    inset: -12px -8px;
+    border-radius: 44px;
+  }
+
+  /* Gallery — 4 columns */
+  .gallery__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* Reviews — 3 columns */
+  .reviews__grid {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: start;
+  }
+
+  /* Footer */
+  .footer__top {
+    grid-template-columns: 300px 1fr;
+  }
+
+  /* Why pillars — more padding */
+  .why__pillar {
+    padding: var(--sp-10);
+  }
+
+  /* Stats */
+  .stat {
+    padding: var(--sp-10);
+  }
+}
+
+/* ============================================================
+   6. DESKTOPS — 1280px+
+   ============================================================ */
+@media (min-width: 1280px) {
+
+  /* Nav links more spacious */
+  .nav__links { gap: var(--sp-2); }
+
+  /* Features — 4–5 columns for last two cards side by side */
+  .features__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* 10 cards: force last row to be 1 card centered */
+  /* (Design choice: keep 3 col for elegant spacing) */
+
+  /* Gallery items slightly taller on large screens */
+  .gallery__item {
+    aspect-ratio: 9/18;
+  }
+
+  /* Hero more generous */
+  .hero__content { gap: var(--sp-8); }
+
+  /* Wider footer brand column */
+  .footer__top {
+    grid-template-columns: 320px 1fr;
+    gap: var(--sp-20);
+  }
+}
+
+/* ============================================================
+   7. RTL / LTR LAYOUT ADJUSTMENTS
+   ============================================================ */
+
+/* LTR overrides for English mode */
+body.lang-en {
+
+  /* Flip mockup info panel to the other side */
+  .mockup__stage {
+    flex-direction: row-reverse;
+  }
+
+  /* Footer nav link hover direction */
+  .footer__nav-link:hover {
+    transform: translateX(4px);
+  }
+
+  /* Why pillars slide from opposite direction */
+  .why__pillar:hover {
+    transform: translateX(-6px);
+  }
+
+  /* Nav logo text direction */
+  .nav__logo { flex-direction: row; }
+
+  /* Section eyebrow lines */
+  .section__eyebrow::before { order: -1; }
+  .section__eyebrow::after  { order: 1; }
+
+  /* Phone side info alignment */
+  .mockup__info-item {
+    text-align: left;
+  }
+
+  /* FAQ question text alignment */
+  .faq__question {
+    text-align: left;
+  }
+
+  /* Hero scroll in center is the same for both directions */
+}
+
+/* RTL-specific phone button positions */
+body.lang-ar .phone__btn--vol-up,
+body.lang-ar .phone__btn--vol-down {
+  left: -10px;
+  right: auto;
+}
+
+body.lang-ar .phone__btn--power {
+  right: -10px;
+  left: auto;
+}
+
+/* LTR phone button flip */
+body.lang-en .phone__btn--vol-up,
+body.lang-en .phone__btn--vol-down {
+  right: -10px;
+  left: auto;
+}
+
+body.lang-en .phone__btn--power {
+  left: -10px;
+  right: auto;
+}
+
+/* ============================================================
+   8. SAFE AREA INSETS (iPhone notch / Dynamic Island)
+   ============================================================ */
+
+@supports (padding: max(0px)) {
+  .nav__container {
+    padding-inline: max(clamp(var(--sp-6), 5vw, var(--sp-16)), env(safe-area-inset-left));
+  }
+
+  .hero__scroll {
+    bottom: max(var(--sp-8), env(safe-area-inset-bottom));
+  }
+
+  .share-modal__panel {
+    padding-bottom: max(var(--sp-8), env(safe-area-inset-bottom));
+  }
+
+  .toast {
+    bottom: max(var(--sp-8), calc(env(safe-area-inset-bottom) + var(--sp-4)));
+  }
+}
+
+/* ============================================================
+   9. HIGH DPI / RETINA DISPLAYS
+   ============================================================ */
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* Ensure 1px borders are crisp on retina */
+  .feature-card,
+  .why__pillar,
+  .review-card,
+  .faq__item {
+    border-width: 0.5px;
+  }
+}
+
+/* ============================================================
+   10. PRINT STYLES
+   ============================================================ */
+
+@media print {
+  /* Hide interactive and decorative elements */
+  .nav,
+  .loader,
+  .hero__particles,
+  .hero__scroll,
+  #scrollProgress,
+  #cursorDot,
+  .share-modal,
+  .lightbox,
+  .toast,
+  .cta,
+  .footer__nav { display: none !important; }
+
+  /* Flatten backgrounds */
+  body { background: #fff; color: #000; }
+  .hero { background: var(--clr-primary) !important; min-height: auto; padding: 40px 20px; }
+
+  /* Reset shadows */
+  * { box-shadow: none !important; }
+
+  /* Show all text as full opacity */
+  .hero__description,
+  .hero__badges { color: rgba(255,255,255,0.9) !important; }
+
+  /* Show all URLs */
+  a[href]::after {
+    content: ' (' attr(href) ')';
+    font-size: 0.8em;
+    color: #555;
+  }
+}
+
+/* ============================================================
+   11. LANDSCAPE MOBILE ADJUSTMENTS
+   ============================================================ */
+
+@media (max-height: 600px) and (orientation: landscape) {
+  .hero {
+    min-height: auto;
+    padding-block: calc(var(--nav-h) + var(--sp-8)) var(--sp-10);
+  }
+
+  .hero__icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .hero__icon-wrap {
+    width: 80px;
+    height: 80px;
+  }
+
+  .hero__bismillah { font-size: 1.4rem; }
+  .hero__content   { gap: var(--sp-4); }
+  .hero__scroll    { display: none; }
+
+  /* Phone in landscape */
+  .phone__screen {
+    width: 200px;
+    height: 444px;
+    border-radius: 26px;
+  }
+}
+
+/* ============================================================
+   12. FORCED COLORS (Windows High Contrast)
+   ============================================================ */
+
+@media (forced-colors: active) {
+  .btn--primary {
+    background: ButtonText;
+    color: ButtonFace;
+    border-color: ButtonText;
+  }
+
+  .btn--primary:hover {
+    background: Highlight;
+    border-color: Highlight;
+  }
+
+  .feature-card,
+  .review-card,
+  .why__pillar,
+  .faq__item {
+    border: 1px solid ButtonText;
+  }
+
+  .section__eyebrow::before,
+  .section__eyebrow::after {
+    background: ButtonText;
+  }
+
+  .hero__bg-overlay { display: none; }
+  .hero__title-arabic { color: HighlightText; }
+  .hero__description  { color: HighlightText; }
+}
