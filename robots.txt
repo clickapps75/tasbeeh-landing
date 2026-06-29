@@ -1,0 +1,17 @@
+# ============================================================
+# TASBEEH LANDING — robots.txt
+# Allow all crawlers, point to sitemap
+# ============================================================
+
+User-agent: *
+Allow: /
+
+# Block unnecessary paths
+Disallow: /assets/icons/
+Disallow: /*.json$
+
+# Sitemap location
+Sitemap: https://clickapps75.github.io/tasbeeh/sitemap.xml
+
+# Crawl-delay for polite bots
+Crawl-delay: 1

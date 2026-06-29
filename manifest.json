@@ -1,0 +1,61 @@
+{
+  "name": "تسبيح | Tasbeeh",
+  "short_name": "تسبيح",
+  "description": "تطبيق إسلامي أنيق لعداد التسبيح والأذكار وأوقات الصلاة — An elegant Islamic app for dhikr, azkar and prayer times.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#FAFBF8",
+  "theme_color": "#146C43",
+  "lang": "ar",
+  "dir": "rtl",
+  "categories": ["lifestyle", "religion", "utilities"],
+  "icons": [
+    { "src": "assets/icons/icon-72.png",   "sizes": "72x72",   "type": "image/png", "purpose": "any" },
+    { "src": "assets/icons/icon-96.png",   "sizes": "96x96",   "type": "image/png", "purpose": "any" },
+    { "src": "assets/icons/icon-128.png",  "sizes": "128x128", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icons/icon-144.png",  "sizes": "144x144", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icons/icon-152.png",  "sizes": "152x152", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icons/icon-192.png",  "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "assets/icons/icon-384.png",  "sizes": "384x384", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icons/icon-512.png",  "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ],
+  "screenshots": [
+    {
+      "src": "assets/screenshots/screen1.jpg",
+      "sizes": "1080x1920",
+      "type": "image/jpeg",
+      "label": "عداد التسبيح الإلكتروني"
+    },
+    {
+      "src": "assets/screenshots/screen2.jpg",
+      "sizes": "1080x1920",
+      "type": "image/jpeg",
+      "label": "أذكار الصباح"
+    },
+    {
+      "src": "assets/screenshots/screen3.jpg",
+      "sizes": "1080x1920",
+      "type": "image/jpeg",
+      "label": "أوقات الصلاة"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "تحميل التطبيق",
+      "short_name": "تحميل",
+      "description": "تحميل ملف APK مباشرة",
+      "url": "https://github.com/clickapps75/Tasbeeh/releases/download/1.0.8/app-release.apk",
+      "icons": [{ "src": "assets/icons/icon-96.png", "sizes": "96x96" }]
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "play",
+      "url": "https://play.google.com/store",
+      "id": "com.clickapps.tasbeeh"
+    }
+  ],
+  "prefer_related_applications": false
+}

@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <!-- ============================================================
+       META & SEO
+  ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- Primary Meta -->
+  <title>تسبيح | Tasbeeh — سبحتك وأذكارك معك في كل مكان</title>
+  <meta name="description" content="تسبيح — تطبيق إسلامي أنيق لعداد التسبيح والأذكار وأوقات الصلاة. مجاني ويعمل بدون إنترنت. Tasbeeh — elegant Islamic app for dhikr counter, morning/evening azkar, and prayer times." />
+  <meta name="keywords" content="تسبيح, tasbeeh, أذكار, azkar, prayer times, أوقات الصلاة, عداد تسبيح, dhikr counter, islamic app, تطبيق إسلامي, clicks apps" />
+  <meta name="author" content="Clicks Apps" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://clickapps75.github.io/tasbeeh/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://clickapps75.github.io/tasbeeh/" />
+  <meta property="og:title" content="تسبيح | Tasbeeh — سبحتك وأذكارك معك في كل مكان" />
+  <meta property="og:description" content="تطبيق إسلامي أنيق لعداد التسبيح والأذكار وأوقات الصلاة. مجاني ويعمل بدون إنترنت." />
+  <meta property="og:image" content="assets/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="ar_SA" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:site_name" content="Tasbeeh by Clicks Apps" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="تسبيح | Tasbeeh — سبحتك وأذكارك معك في كل مكان" />
+  <meta name="twitter:description" content="سبحتك وأذكارك معك في كل مكان — تطبيق إسلامي مجاني." />
+  <meta name="twitter:image" content="assets/og-image.jpg" />
+
+  <!-- Theme & PWA -->
+  <meta name="theme-color" content="#146C43" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Tasbeeh" />
+  <link rel="manifest" href="manifest.json" />
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "Tasbeeh",
+    "alternateName": "تسبيح",
+    "description": "Islamic app for dhikr counter, morning/evening azkar, prayer times, and daily goals.",
+    "applicationCategory": "LifestyleApplication",
+    "operatingSystem": "ANDROID",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "Clicks Apps",
+      "email": "clickapps75@gmail.com"
+    },
+    "downloadUrl": "https://play.google.com/store/apps/details?id=com.tasbeeh.tasbeeh_app",
+    "screenshot": "assets/screenshots/screen1.jpg",
+    "featureList": [
+      "Electronic Tasbeeh Counter",
+      "Morning Azkar",
+      "Evening Azkar",
+      "Prayer Times",
+      "Daily Goals",
+      "Daily Statistics",
+      "Beautiful Wallpapers",
+      "Dark Mode",
+      "Works Offline",
+      ]
+  }
+  </script>
+</head>
+
+<body class="lang-ar">
+
+  <!-- ============================================================
+       LOADING SCREEN
+  ============================================================ -->
+  <div id="loader" class="loader" aria-hidden="true">
+    <div class="loader__inner">
+      <div class="loader__icon">
+        <img src="assets/logo.png" alt="Tasbeeh" width="72" height="72" />
+      </div>
+      <div class="loader__ring"></div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       NAVIGATION
+  ============================================================ -->
+  <header class="nav" id="nav" role="banner">
+    <div class="nav__container">
+
+      <!-- Logo -->
+      <a href="#" class="nav__logo" aria-label="Tasbeeh - Home">
+        <img src="assets/logo.png" alt="Tasbeeh Logo" width="40" height="40" class="nav__logo-img" />
+        <span class="nav__logo-text" data-ar="تسبيح" data-en="Tasbeeh">تسبيح</span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="nav__links" aria-label="Primary navigation">
+        <a href="#features"   class="nav__link" data-ar="المميزات"    data-en="Features">المميزات</a>
+        <a href="#reviews"    class="nav__link" data-ar="التقييمات"   data-en="Reviews">التقييمات</a>
+      </nav>
+
+      <!-- Nav Actions -->
+      <div class="nav__actions">
+        <!-- Language Toggle -->
+        <button class="lang-toggle" id="langToggle" aria-label="Switch language" title="Switch language">
+          <span class="lang-toggle__icon">🌐</span>
+          <span class="lang-toggle__label" data-ar="EN" data-en="AR">EN</span>
+        </button>
+
+        <!-- CTA -->
+        <a href="https://play.google.com/store/apps/details?id=com.tasbeeh.tasbeeh_app"
+           class="btn btn--primary btn--sm nav__cta"
+           data-ar="تحميل التطبيق"
+           data-en="Download App"
+           aria-label="Download Tasbeeh on Google Play"
+           target="_blank" rel="noopener noreferrer">
+          تحميل التطبيق
+        </a>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="nav__hamburger" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="nav__mobile" id="mobileMenu" aria-hidden="true">
+      <a href="#features"    class="nav__mobile-link" data-ar="المميزات"     data-en="Features">المميزات</a>
+      <a href="#reviews"     class="nav__mobile-link" data-ar="التقييمات"    data-en="Reviews">التقييمات</a>
+      <a href="https://play.google.com/store/apps/details?id=com.tasbeeh.tasbeeh_app"
+         class="btn btn--primary nav__mobile-cta"
+         data-ar="تحميل التطبيق"
+         data-en="Download App"
+         target="_blank" rel="noopener noreferrer">تحميل التطبيق</a>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       HERO SECTION
+  ============================================================ -->
+  <section class="hero" id="hero" aria-label="Hero section">
+
+    <!-- Background layers -->
+    <div class="hero__bg" aria-hidden="true">
+      <div class="hero__bg-image"></div>
+      <div class="hero__bg-overlay"></div>
+      <div class="hero__bg-pattern"></div>
+      <div class="hero__bg-bloom"></div>
+    </div>
+
+    <!-- Floating ambient particles -->
+    <div class="hero__particles" aria-hidden="true">
+      <span class="particle"></span><span class="particle"></span>
+      <span class="particle"></span><span class="particle"></span>
+      <span class="particle"></span><span class="particle"></span>
+      <span class="particle"></span><span class="particle"></span>
+    </div>
+
+    <!-- Hero Content -->
+    <div class="hero__content">
+
+      <!-- App Icon — floating -->
+      <div class="hero__icon-wrap reveal-scale">
+        <div class="hero__icon-glow" aria-hidden="true"></div>
+        <img src="assets/logo.png" alt="Tasbeeh App Icon" class="hero__icon" width="120" height="120" />
+      </div>
+
+      <!-- Title -->
+      <h1 class="hero__title reveal-up">
+        <span class="hero__title-arabic" data-ar="تسبيح" data-en="Tasbeeh">تسبيح</span>
+        <span class="hero__title-divider" aria-hidden="true"></span>
+        <span class="hero__title-tagline" data-ar="سبحتك وأذكارك معك في كل مكان" data-en="Your Tasbeeh & Azkar, Wherever You Are">سبحتك وأذكارك معك في كل مكان</span>
+      </h1>
+
+      <!-- Description -->
+      <p class="hero__description reveal-up reveal-delay-1"
+         data-ar="تطبيق إسلامي أنيق يجمع بين عداد التسبيح الإلكتروني وأذكار الصباح والمساء وأوقات الصلاة والأهداف اليومية — مجاناً ويعمل بدون إنترنت."
+         data-en="An elegant Islamic companion bringing together an electronic dhikr counter, morning & evening azkar, prayer times, and daily goals — completely free and offline-ready.">
+        تطبيق إسلامي أنيق يجمع بين عداد التسبيح الإلكتروني وأذكار الصباح والمساء وأوقات الصلاة والأهداف اليومية — مجاناً ويعمل بدون إنترنت.
+      </p>
+
+      <!-- CTA Buttons -->
+      <div class="hero__cta reveal-up reveal-delay-2" role="group" aria-label="Download options">
+
+        <!-- Primary: Google Play -->
+        <a href="https://play.google.com/store/apps/details?id=com.tasbeeh.tasbeeh_app"
+           class="btn btn--primary btn--lg hero__btn-play"
+           data-ar="Google Play"
+           data-en="Google Play"
+           aria-label="Download Tasbeeh on Google Play"
+           target="_blank" rel="noopener noreferrer">
+          <svg class="btn__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M3.18 23.76c.37.2.8.22 1.19.06L16.91 12 4.37.18C3.98.02 3.55.04 3.18.24 2.46.64 2 1.4 2 2.23v19.54c0 .83.46 1.59 1.18 1.99zm.82-20.9 11.1 9.14L4 21.14V2.86zm13.57 7.72-2.8-2.3 2.8-2.3 3.17 1.83c.9.52.9 1.72 0 2.24l-3.17 1.83-.01-.01 .01-.01z"/>
+          </svg>
+          Google Play
+        </a>
+
+        <!-- Secondary: GitHub latest -->
+        <a href="https://github.com/clickapps75/Tasbeeh/releases/download/1.0.8/app-release.apk"
+           class="btn btn--ghost btn--lg hero__btn-download"
+           data-ar="تحميل APK"
+           data-en="Download APK"
+           aria-label="Download latest APK from GitHub"
+           target="_blank" rel="noopener noreferrer">
+          <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+          </svg>
+          تحميل APK
+        </a>
+
+        <button class="btn btn--outline btn--lg hero__btn-share" id="shareBtn"
+                data-ar="مشاركة"
+                data-en="Share"
+                aria-label="Share Tasbeeh app">
+          <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
+            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+          </svg>
+          مشاركة
+        </button>
+      </div>
+
+      <!-- Hero Trust Badges -->
+      <div class="hero__badges reveal-up reveal-delay-3" aria-label="App highlights">
+        <div class="badge">
+          <span class="badge__icon">✦</span>
+          <span data-ar="مجاني 100%" data-en="100% Free">مجاني 100%</span>
+        </div>
+        <div class="badge">
+          <span class="badge__icon">✦</span>
+          <span data-ar="يعمل offline" data-en="Works Offline">يعمل offline</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Hero Scroll Indicator -->
+    <div class="hero__scroll" aria-hidden="true">
+      <div class="hero__scroll-line"></div>
+      <span class="hero__scroll-text" data-ar="اكتشف المزيد" data-en="Discover More">اكتشف المزيد</span>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FEATURES SECTION
+  ============================================================ -->
+  <section class="features section" id="features" aria-labelledby="features-heading">
+    <div class="container">
+
+      <!-- Section Header -->
+      <div class="section__header">
+        <span class="section__eyebrow" data-ar="ما يميزنا" data-en="What Sets Us Apart">ما يميزنا</span>
+        <h2 class="section__title" id="features-heading"
+            data-ar="مميزات التطبيق"
+            data-en="App Features">مميزات التطبيق</h2>
+        <p class="section__subtitle"
+           data-ar="كل ما تحتاجه للتواصل مع الله في مكان واحد"
+           data-en="Everything you need to connect with Allah, in one place">
+          كل ما تحتاجه للتواصل مع الله في مكان واحد
+        </p>
+      </div>
+
+      <!-- Features Grid -->
+      <div class="features__grid" role="list">
+
+        <!-- Feature 1: Tasbeeh Counter -->
+        <article class="feature-card reveal-card" role="listitem">
+          <div class="feature-card__icon-wrap">
+            <div class="feature-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none">
+                <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2"/>
+                <circle cx="24" cy="24" r="12" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 3"/>
+                <circle cx="24" cy="24" r="4" fill="currentColor"/>
+                <circle cx="24" cy="8"  r="2.5" fill="currentColor"/>
+                <circle cx="38" cy="16" r="2.5" fill="currentColor"/>
+                <circle cx="10" cy="16" r="2.5" fill="currentColor"/>
+              </svg>
+            </div>
+          </div>
+          <h3 class="feature-card__title" data-ar="عداد التسبيح" data-en="Tasbeeh Counter">عداد التسبيح</h3>
+          <p class="feature-card__desc"
+             data-ar="عداد إلكتروني أنيق مع اهتزاز خفيف وأصوات هادئة، يحفظ تقدمك تلقائياً"
+             data-en="Elegant electronic counter with gentle haptics and ambient sounds — saves your progress automatically">
+            عداد إلكتروني أنيق مع اهتزاز خفيف وأصوات هادئة، يحفظ تقدمك تلقائياً
+          </p>
+          <div class="feature-card__glow" aria-hidden="true"></div>
+        </article>
+
+        <!-- Feature 2: Morning Azkar -->
+        <article class="feature-card reveal-card" role="listitem">
+          <div class="feature-card__icon-wrap">
+            <div class="feature-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none">
+                <path d="M24 6 L24 10M6 24 L10 24M38 24 L42 24M24 38 L24 42" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M12 12 L15 15M33 15 L36 12M12 36 L15 33M33 33 L36 36" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="24" cy="24" r="9" stroke="currentColor" stroke-width="2"/>
+                <path d="M24 18 Q28 22 24 26 Q20 22 24 18Z" fill="currentColor"/>
+              </svg>
+            </div>
+          </div>
+          <h3 class="feature-card__title" data-ar="أذكار الصباح" data-en="Morning Azkar">أذكار الصباح</h3>
+          <p class="feature-card__desc"
+             data-ar="ابدأ يومك بذكر الله — مجموعة كاملة من أذكار الصباح بتصميم جميل يُسهّل القراءة"
+             data-en="Begin your day remembering Allah — a complete collection of morning supplications with beautiful, readable design">
+            ابدأ يومك بذكر الله — مجموعة كاملة من أذكار الصباح بتصميم جميل يُسهّل القراءة
+          </p>
+          <div class="feature-card__glow" aria-hidden="true"></div>
+        </article>
+
+        <!-- Feature 3: Evening Azkar -->
+        <article class="feature-card reveal-card" role="listitem">
+          <div class="feature-card__icon-wrap">
+            <div class="feature-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none">
+                <path d="M32 10 Q38 18 35 28 Q32 38 20 40 Q12 38 10 30 Q8 20 16 14 Q20 12 24 13 Q26 16 24 20 Q22 28 28 30 Q36 28 32 10Z" stroke="currentColor" stroke-width="2" fill="none"/>
+                <circle cx="36" cy="14" r="1.5" fill="currentColor"/>
+                <circle cx="40" cy="22" r="1" fill="currentColor"/>
+                <circle cx="38" cy="30" r="1.5" fill="currentColor"/>
+              </svg>
+            </div>
+          </div>
+          <h3 class="feature-card__title" data-ar="أذكار المساء" data-en="Evening Azkar">أذكار المساء</h3>
+          <p class="feature-card__desc"
+             data-ar="اختم يومك بذكر الله — أذكار المساء كاملةً مع تتبع تلقائي لما أتممت منها"
+             data-en="End your day with Allah's remembrance — complete evening azkar with automatic tracking">
+            اختم يومك بذكر الله — أذكار المساء كاملةً مع تتبع تلقائي لما أتممت منها
+          </p>
+          <div class="feature-card__glow" aria-hidden="true"></div>
+        </article>
+
+        <!-- Feature 4: Prayer Times -->
+        <article class="feature-card reveal-card" role="listitem">
+          <div class="feature-card__icon-wrap">
+            <div class="feature-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none">
+                <rect x="8" y="14" width="32" height="26" rx="4" stroke="currentColor" stroke-width="2"/>
+                <path d="M8 22 L40 22" stroke="currentColor" stroke-width="2"/>
+                <path d="M16 8 L16 16M32 8 L32 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M15 31 L21 31M15 35 L27 35" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="32" cy="33" r="4" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M32 30 L32 33 L34 35" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+          </div>
+          <h3 class="feature-card__title" data-ar="أوقات الصلاة" data-en="Prayer Times">أوقات الصلاة</h3>
+          <p class="feature-card__desc"
+             data-ar="مواقيت الصلاة الدقيقة بناءً على موقعك — مع إشعارات قبل كل أذان"
+             data-en="Accurate prayer times based on your location — with gentle notifications before each adhan">
+            مواقيت الصلاة الدقيقة بناءً على موقعك — مع إشعارات قبل كل أذان
+          </p>
+          <div class="feature-card__glow" aria-hidden="true"></div>
+        </article>
+
+        <!-- Feature 5: Daily Goals -->
+        <article class="feature-card reveal-card" role="listitem">
+          <div class="feature-card__icon-wrap">
+            <div class="feature-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none">
+                <circle cx="24" cy="24" r="16" stroke="currentColor" stroke-width="2"/>
+                <circle cx="24" cy="24" r="10" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 2"/>
+                <path d="M24 8 L24 24 L34 30" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="24" cy="24" r="2.5" fill="currentColor"/>
+              </svg>
+            </div>
+          </div>
+          <h3 class="feature-card__title" data-ar="الأهداف اليومية" data-en="Daily Goals">الأهداف اليومية</h3>
+          <p class="feature-card__desc"
+             data-ar="حدّد هدفاً يومياً للتسبيح وتابع تقدمك — ابنِ عادة روحية ثابتة"
+             data-en="Set your daily dhikr goal and track your progress — build a consistent spiritual habit">
+            حدّد هدفاً يومياً للتسبيح وتابع تقدمك — ابنِ عادة روحية ثابتة
+          </p>
+          <div class="feature-card__glow" aria-hidden="true"></div>
+        </article>
+
+        <!-- Feature 6: Statistics -->
+        <article class="feature-card reveal-card" role="listitem">
+          <div class="feature-card__icon-wrap">
+            <div class="feature-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none">
+                <rect x="8" y="28" width="8" height="12" rx="2" fill="currentColor" opacity=".4"/>
+                <rect x="20" y="18" width="8" height="22" rx="2" fill="currentColor" opacity=".7"/>
+                <rect x="32" y="10" width="8" height="30" rx="2" fill="currentColor"/>
+                <path d="M6 42 L42 42" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M14 20 L24 14 L36 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="2 2"/>
+              </svg>
+            </div>
+          </div>
+          <h3 class="feature-card__title" data-ar="الإحصائيات اليومية" data-en="Daily Statistics">الإحصائيات اليومية</h3>
+          <p class="feature-card__desc"
+             data-ar="تابع رحلتك الروحية — مخططات جميلة تُظهر تطورك اليومي والأسبوعي"
+             data-en="Follow your spiritual journey — beautiful charts showing your daily and weekly progress">
+            تابع رحلتك الروحية — مخططات جميلة تُظهر تطورك اليومي والأسبوعي
+          </p>
+          <div class="feature-card__glow" aria-hidden="true"></div>
+        </article>
+
+        <!-- Feature 7: Wallpapers -->
+        <article class="feature-card reveal-card" role="listitem">
+          <div class="feature-card__icon-wrap">
+            <div class="feature-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none">
+                <rect x="6" y="8" width="36" height="32" rx="4" stroke="currentColor" stroke-width="2"/>
+                <circle cx="16" cy="18" r="4" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M6 30 L16 22 L24 28 L32 20 L42 30" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M30 14 L34 14M32 12 L32 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+          </div>
+          <h3 class="feature-card__title" data-ar="خلفيات جميلة" data-en="Beautiful Wallpapers">خلفيات جميلة</h3>
+          <p class="feature-card__desc"
+             data-ar="مجموعة من الخلفيات الإسلامية الأنيقة — اختر ما يناسب روحك"
+             data-en="A curated collection of elegant Islamic wallpapers — choose what speaks to your soul">
+            مجموعة من الخلفيات الإسلامية الأنيقة — اختر ما يناسب روحك
+          </p>
+          <div class="feature-card__glow" aria-hidden="true"></div>
+        </article>
+
+        <!-- Feature 8: Dark Mode -->
+        <article class="feature-card reveal-card" role="listitem">
+          <div class="feature-card__icon-wrap">
+            <div class="feature-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none">
+                <circle cx="24" cy="24" r="16" stroke="currentColor" stroke-width="2"/>
+                <path d="M24 8 A16 16 0 0 0 24 40 A16 16 0 0 1 24 8Z" fill="currentColor"/>
+                <circle cx="24" cy="24" r="5" stroke="currentColor" stroke-width="1.5"/>
+              </svg>
+            </div>
+          </div>
+          <h3 class="feature-card__title" data-ar="الوضع الليلي" data-en="Dark Mode">الوضع الليلي</h3>
+          <p class="feature-card__desc"
+             data-ar="تصميم داكن أنيق يريح عينيك ليلاً ويحافظ على عمر البطارية"
+             data-en="Elegant dark design that rests your eyes at night and extends battery life">
+            تصميم داكن أنيق يريح عينيك ليلاً ويحافظ على عمر البطارية
+          </p>
+          <div class="feature-card__glow" aria-hidden="true"></div>
+        </article>
+
+        <!-- Feature 9: Offline -->
+        <article class="feature-card reveal-card" role="listitem">
+          <div class="feature-card__icon-wrap">
+            <div class="feature-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none">
+                <path d="M24 36 L24 26M20 30 L24 26 L28 30" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M14 22 Q10 14 18 12 Q20 6 28 8 Q36 8 36 18 Q42 20 40 28 Q38 34 32 34" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M4 4 L44 44" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity=".3"/>
+              </svg>
+            </div>
+          </div>
+          <h3 class="feature-card__title" data-ar="يعمل بدون إنترنت" data-en="Works Offline">يعمل بدون إنترنت</h3>
+          <p class="feature-card__desc"
+             data-ar="لا تحتاج إلى اتصال بالإنترنت — اذكر الله في أي مكان وفي أي وقت"
+             data-en="No internet connection needed — remember Allah anywhere, anytime">
+            لا تحتاج إلى اتصال بالإنترنت — اذكر الله في أي مكان وفي أي وقت
+          </p>
+          <div class="feature-card__glow" aria-hidden="true"></div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PHONE MOCKUP SECTION (Interactive Carousel)
+  ============================================================ -->
+  <section class="mockup section" id="mockup" aria-labelledby="mockup-heading">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__eyebrow" data-ar="شاهد التطبيق" data-en="See It In Action">شاهد التطبيق</span>
+        <h2 class="section__title" id="mockup-heading"
+            data-ar="تصميم أنيق يُفرح القلب"
+            data-en="Elegant Design That Delights">تصميم أنيق يُفرح القلب</h2>
+      </div>
+
+      <div class="mockup__stage">
+        <!-- Decorative blobs -->
+        <div class="mockup__blob mockup__blob--1" aria-hidden="true"></div>
+        <div class="mockup__blob mockup__blob--2" aria-hidden="true"></div>
+
+        <!-- Phone Frame — Android 14 style -->
+        <div class="phone phone--android" aria-label="App screenshots carousel" role="region">
+          <div class="phone__frame" aria-hidden="true">
+            <!-- Android punch-hole camera (top-center) -->
+            <div class="phone__punch"></div>
+            <!-- Volume & power buttons -->
+            <div class="phone__btn phone__btn--vol-up"></div>
+            <div class="phone__btn phone__btn--vol-down"></div>
+            <div class="phone__btn phone__btn--power"></div>
+          </div>
+
+          <!-- Screen Slider -->
+          <div class="phone__screen">
+            <div class="phone__slides" id="phoneSlides" role="list">
+              <div class="phone__slide" role="listitem">
+                <img src="assets/screenshots/screen1.jpg" alt="عداد التسبيح — Tasbeeh counter" loading="eager" width="280" height="535" />
+              </div>
+              <div class="phone__slide" role="listitem">
+                <img src="assets/screenshots/screen4.jpg" alt="أذكار الصباح — Morning Azkar" loading="lazy" width="280" height="535" />
+              </div>
+              <div class="phone__slide" role="listitem">
+                <img src="assets/screenshots/screen3.jpg" alt="أذكار المساء — Evening Azkar" loading="lazy" width="280" height="535" />
+              </div>
+              <div class="phone__slide" role="listitem">
+                <img src="assets/screenshots/screen2.jpg" alt="أوقات الصلاة — Prayer Times" loading="lazy" width="280" height="535" />
+              </div>
+              <div class="phone__slide" role="listitem">
+                <img src="assets/screenshots/screen6.jpg" alt="السجل اليومي — Daily Log" loading="lazy" width="280" height="535" />
+              </div>
+              <div class="phone__slide" role="listitem">
+                <img src="assets/screenshots/screen5.jpg" alt="الإعدادات — Settings" loading="lazy" width="280" height="535" />
+              </div>
+              <div class="phone__slide" role="listitem">
+                <img src="assets/screenshots/screen7.jpg" alt="الخلفيات — Wallpapers" loading="lazy" width="280" height="535" />
+              </div>
+              <div class="phone__slide" role="listitem">
+                <img src="assets/screenshots/screen8.jpg" alt="الحمد لله — Counter 2" loading="lazy" width="280" height="535" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide Dots -->
+          <div class="phone__dots" role="tablist" aria-label="Screenshot navigation">
+            <button class="phone__dot active" role="tab" aria-selected="true"  aria-label="Screenshot 1"></button>
+            <button class="phone__dot" role="tab" aria-selected="false" aria-label="Screenshot 2"></button>
+            <button class="phone__dot" role="tab" aria-selected="false" aria-label="Screenshot 3"></button>
+            <button class="phone__dot" role="tab" aria-selected="false" aria-label="Screenshot 4"></button>
+            <button class="phone__dot" role="tab" aria-selected="false" aria-label="Screenshot 5"></button>
+            <button class="phone__dot" role="tab" aria-selected="false" aria-label="Screenshot 6"></button>
+            <button class="phone__dot" role="tab" aria-selected="false" aria-label="Screenshot 7"></button>
+            <button class="phone__dot" role="tab" aria-selected="false" aria-label="Screenshot 8"></button>
+          </div>
+        </div>
+
+        <!-- Side content -->
+        <div class="mockup__info">
+          <div class="mockup__info-item reveal-left" id="mockupInfoItem">
+            <div class="mockup__info-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none">
+                <circle cx="16" cy="16" r="13" stroke="currentColor" stroke-width="1.5"/>
+                <circle cx="16" cy="16" r="5" fill="currentColor" opacity=".3"/>
+                <path d="M16 6 L16 11M26 16 L21 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="mockup__info-title" data-ar="عداد التسبيح" data-en="Tasbeeh Counter">عداد التسبيح</h3>
+              <p class="mockup__info-text"
+                 data-ar="انقر لتعدّ — بسيط وأنيق"
+                 data-en="Tap to count — simple and elegant">انقر لتعدّ — بسيط وأنيق</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       STATISTICS
+  ============================================================ -->
+  <section class="stats section" id="stats" aria-labelledby="stats-heading">
+    <div class="container">
+      <h2 class="sr-only" id="stats-heading">App Statistics</h2>
+      <div class="stats__grid">
+        <div class="stat reveal-scale">
+          <div class="stat__value" data-target="100" data-suffix="%" aria-label="100% offline">
+            <span class="stat__number">0</span><span class="stat__suffix">%</span>
+          </div>
+          <div class="stat__label" data-ar="يعمل Offline" data-en="Works Offline">يعمل Offline</div>
+        </div>
+        <div class="stat reveal-scale reveal-delay-1">
+          <div class="stat__value" data-target="4" data-suffix="+" aria-label="4+ screens">
+            <span class="stat__number">0</span><span class="stat__suffix">+</span>
+          </div>
+          <div class="stat__label" data-ar="شاشات أنيقة" data-en="Elegant Screens">شاشات أنيقة</div>
+        </div>
+        <div class="stat reveal-scale reveal-delay-2">
+          <div class="stat__value" data-target="100" data-suffix="%" aria-label="100% free">
+            <span class="stat__number">0</span><span class="stat__suffix">%</span>
+          </div>
+          <div class="stat__label" data-ar="مجاني" data-en="Free">مجاني</div>
+        </div>
+        <div class="stat reveal-scale reveal-delay-3">
+          <div class="stat__value" data-target="10" data-suffix="+" aria-label="10+ features">
+            <span class="stat__number">0</span><span class="stat__suffix">+</span>
+          </div>
+          <div class="stat__label" data-ar="مميزة" data-en="Features">مميزة</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       REVIEWS
+  ============================================================ -->
+  <section class="reviews section" id="reviews" aria-labelledby="reviews-heading">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__eyebrow" data-ar="ماذا يقولون" data-en="What They Say">ماذا يقولون</span>
+        <h2 class="section__title" id="reviews-heading"
+            data-ar="آراء المستخدمين"
+            data-en="User Reviews">آراء المستخدمين</h2>
+      </div>
+
+      <div class="reviews__grid">
+
+        <article class="review-card reveal-card" aria-label="Review from Ahmed">
+          <div class="review-card__stars" aria-label="5 stars">
+            <span aria-hidden="true">★★★★★</span>
+          </div>
+          <blockquote class="review-card__text"
+             data-ar="تطبيق رائع ومريح جداً، التصميم نظيف والتجربة سلسة. أصبح جزءاً من روتيني اليومي بعد الفجر."
+             data-en="Wonderful and very comfortable app. The design is clean and the experience is smooth. It has become part of my daily routine after Fajr.">
+            تطبيق رائع ومريح جداً، التصميم نظيف والتجربة سلسة. أصبح جزءاً من روتيني اليومي بعد الفجر.
+          </blockquote>
+          <footer class="review-card__footer">
+            <div class="review-card__avatar" aria-hidden="true">أ</div>
+            <div>
+              <div class="review-card__name">أحمد م.</div>
+              <div class="review-card__date" data-ar="مستخدم منذ شهرين" data-en="User for 2 months">مستخدم منذ شهرين</div>
+            </div>
+          </footer>
+        </article>
+
+        <article class="review-card review-card--featured reveal-card" aria-label="Featured review from Fatima">
+          <div class="review-card__badge" data-ar="أفضل تقييم" data-en="Top Review">أفضل تقييم</div>
+          <div class="review-card__stars" aria-label="5 stars">
+            <span aria-hidden="true">★★★★★</span>
+          </div>
+          <blockquote class="review-card__text"
+             data-ar="أخيراً تطبيق أذكار يعمل بدون إنترنت ويفتح على الفور! التصميم جميل جداً والألوان مريحة للعين. جزاكم الله خيراً."
+             data-en="Finally an azkar app that works offline and opens instantly! The design is beautiful and the colors are easy on the eyes. JazakAllah khayran.">
+            أخيراً تطبيق أذكار يعمل بدون إنترنت ويفتح على الفور! التصميم جميل جداً والألوان مريحة للعين. جزاكم الله خيراً.
+          </blockquote>
+          <footer class="review-card__footer">
+            <div class="review-card__avatar review-card__avatar--gold" aria-hidden="true">ف</div>
+            <div>
+              <div class="review-card__name">فاطمة ع.</div>
+              <div class="review-card__date" data-ar="مستخدمة منذ شهر" data-en="User for 1 month">مستخدمة منذ شهر</div>
+            </div>
+          </footer>
+        </article>
+
+        <article class="review-card reveal-card" aria-label="Review from Omar">
+          <div class="review-card__stars" aria-label="5 stars">
+            <span aria-hidden="true">★★★★★</span>
+          </div>
+          <blockquote class="review-card__text"
+             data-ar="استخدمت كثيراً من تطبيقات الأذكار لكن هذا الأجمل والأبسط. أعجبني خاصية الإحصائيات اليومية كثيراً."
+             data-en="I've used many azkar apps but this is the most beautiful and simplest. I loved the daily statistics feature very much.">
+            استخدمت كثيراً من تطبيقات الأذكار لكن هذا الأجمل والأبسط. أعجبني خاصية الإحصائيات اليومية كثيراً.
+          </blockquote>
+          <footer class="review-card__footer">
+            <div class="review-card__avatar" aria-hidden="true">ع</div>
+            <div>
+              <div class="review-card__name">عمر ك.</div>
+              <div class="review-card__date" data-ar="مستخدم منذ ثلاثة أشهر" data-en="User for 3 months">مستخدم منذ ثلاثة أشهر</div>
+            </div>
+          </footer>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       DOWNLOAD CTA
+  ============================================================ -->
+  <section class="cta section" id="download" aria-labelledby="cta-heading">
+    <div class="cta__bg" aria-hidden="true">
+      <div class="cta__bg-gradient"></div>
+      <div class="cta__bg-pattern"></div>
+    </div>
+    <div class="container">
+      <div class="cta__content">
+        <div class="cta__icon reveal-scale" aria-hidden="true">
+          <img src="assets/logo.png" alt="" width="96" height="96" />
+        </div>
+        <h2 class="cta__title reveal-up" id="cta-heading"
+            data-ar="ابدأ رحلتك مع الذكر اليوم"
+            data-en="Begin Your Dhikr Journey Today">
+          ابدأ رحلتك مع الذكر اليوم
+        </h2>
+        <p class="cta__subtitle reveal-up reveal-delay-1"
+           data-ar="حمّل تسبيح مجاناً — لأن كل تسبيحة لها وزن"
+           data-en="Download Tasbeeh for free — because every tasbih carries weight">
+          حمّل تسبيح مجاناً — لأن كل تسبيحة لها وزن
+        </p>
+        <div class="cta__buttons reveal-up reveal-delay-2">
+          <a href="https://play.google.com/store/apps/details?id=com.tasbeeh.tasbeeh_app"
+             class="btn btn--white btn--lg"
+             data-ar="Google Play"
+             data-en="Google Play"
+             aria-label="Download Tasbeeh on Google Play"
+             target="_blank" rel="noopener noreferrer">
+            <svg class="btn__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M3.18 23.76c.37.2.8.22 1.19.06L16.91 12 4.37.18C3.98.02 3.55.04 3.18.24 2.46.64 2 1.4 2 2.23v19.54c0 .83.46 1.59 1.18 1.99zm.82-20.9 11.1 9.14L4 21.14V2.86zm13.57 7.72-2.8-2.3 2.8-2.3 3.17 1.83c.9.52.9 1.72 0 2.24l-3.17 1.83-.01-.01 .01-.01z"/>
+            </svg>
+            Google Play
+          </a>
+          <a href="https://github.com/clickapps75/Tasbeeh/releases/download/1.0.8/app-release.apk"
+             class="btn btn--outline-white btn--lg"
+             data-ar="تحميل APK"
+             data-en="Download APK"
+             aria-label="Download APK from GitHub"
+             target="_blank" rel="noopener noreferrer">
+            <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+            </svg>
+            تحميل APK
+          </a>
+          <button class="btn btn--ghost-white btn--lg" id="shareBtn2"
+                  data-ar="مشاركة"
+                  data-en="Share"
+                  aria-label="Share Tasbeeh">
+            <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
+              <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+            </svg>
+            مشاركة
+          </button>
+        </div>
+        <p class="cta__note reveal-up reveal-delay-3"
+           data-ar="متوافق مع Android 6.0+ • مجاني تماماً • يعمل offline"
+           data-en="Compatible with Android 6.0+ • Completely Free • Works Offline">
+          متوافق مع Android 6.0+ • مجاني تماماً • يعمل offline
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="#" class="footer__logo" aria-label="Tasbeeh home">
+            <img src="assets/logo.png" alt="Tasbeeh" width="48" height="48" />
+            <span data-ar="تسبيح" data-en="Tasbeeh">تسبيح</span>
+          </a>
+          <p class="footer__tagline"
+             data-ar="ذكر الله في كل لحظة"
+             data-en="Remember Allah Every Moment">ذكر الله في كل لحظة</p>
+        </div>
+
+        <nav class="footer__nav" aria-label="Footer navigation">
+          <div class="footer__nav-group">
+            <h3 class="footer__nav-title" data-ar="التطبيق" data-en="App">التطبيق</h3>
+            <a href="#features" class="footer__nav-link" data-ar="المميزات" data-en="Features">المميزات</a>
+            <a href="#faq" class="footer__nav-link" data-ar="الأسئلة الشائعة" data-en="FAQ">الأسئلة الشائعة</a>
+          </div>
+          <div class="footer__nav-group">
+            <h3 class="footer__nav-title" data-ar="قانوني" data-en="Legal">قانوني</h3>
+            <a href="https://www.termsfeed.com/live/f2a62ebb-0672-4805-8702-5fae7840c171" target="_blank" rel="noopener noreferrer" class="footer__nav-link" data-ar="سياسة الخصوصية" data-en="Privacy Policy">سياسة الخصوصية</a>
+            <a href="terms.html"   class="footer__nav-link" data-ar="شروط الاستخدام" data-en="Terms of Service">شروط الاستخدام</a>
+          </div>
+          <div class="footer__nav-group">
+            <h3 class="footer__nav-title" data-ar="تواصل" data-en="Contact">تواصل</h3>
+            <a href="mailto:clickapps75@gmail.com" class="footer__nav-link">clickapps75@gmail.com</a>
+          </div>
+        </nav>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copy">
+          <span data-ar="© 2025 Clicks Apps. جميع الحقوق محفوظة."
+                data-en="© 2025 Clicks Apps. All rights reserved.">
+            © 2025 Clicks Apps. جميع الحقوق محفوظة.
+          </span>
+        </p>
+        <p class="footer__made"
+           data-ar="صُنع بـ ♥ لكل مسلم في العالم"
+           data-en="Made with ♥ for every Muslim in the world">
+          صُنع بـ ♥ لكل مسلم في العالم
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       SHARE MODAL
+  ============================================================ -->
+  <div class="share-modal" id="shareModal" role="dialog" aria-modal="true" aria-labelledby="shareModalTitle" hidden>
+    <div class="share-modal__backdrop" id="shareBackdrop"></div>
+    <div class="share-modal__panel">
+      <button class="share-modal__close" id="shareModalClose" aria-label="Close share dialog">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <h2 class="share-modal__title" id="shareModalTitle"
+          data-ar="شارك تسبيح"
+          data-en="Share Tasbeeh">شارك تسبيح</h2>
+      <p class="share-modal__subtitle"
+         data-ar="شارك التطبيق مع من تحب"
+         data-en="Share the app with someone you love">شارك التطبيق مع من تحب</p>
+      <div class="share-modal__options">
+        <button class="share-option" id="shareWhatsApp" aria-label="Share on WhatsApp">
+          <div class="share-option__icon share-option__icon--whatsapp" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
+          </div>
+          <span data-ar="واتساب" data-en="WhatsApp">واتساب</span>
+        </button>
+        <button class="share-option" id="shareTelegram" aria-label="Share on Telegram">
+          <div class="share-option__icon share-option__icon--telegram" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.941z"/></svg>
+          </div>
+          <span data-ar="تيليغرام" data-en="Telegram">تيليغرام</span>
+        </button>
+        <button class="share-option" id="shareTwitter" aria-label="Share on Twitter/X">
+          <div class="share-option__icon share-option__icon--twitter" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </div>
+          <span data-ar="تويتر / X" data-en="Twitter / X">تويتر / X</span>
+        </button>
+        <button class="share-option" id="shareCopy" aria-label="Copy link">
+          <div class="share-option__icon share-option__icon--copy" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+          </div>
+          <span id="copyLabel" data-ar="نسخ الرابط" data-en="Copy Link">نسخ الرابط</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       TOAST NOTIFICATION
+  ============================================================ -->
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden>
+    <svg class="toast__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <path d="M20 6L9 17l-5-5"/>
+    </svg>
+    <span class="toast__text" id="toastText"></span>
+  </div>
+
+  <!-- ============================================================
+       SCRIPTS
+  ============================================================ -->
+  <script src="js/language.js" defer></script>
+  <script src="js/app.js" defer></script>
+  <script src="js/gallery.js" defer></script>
+  <script src="js/faq.js" defer></script>
+  <script src="js/share.js" defer></script>
+
+  <!-- Service Worker Registration -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js').catch(() => {});
+      });
+    }
+  </script>
+
+</body>
+</html>

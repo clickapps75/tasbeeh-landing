@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- Main Landing Page -->
+  <url>
+    <loc>https://clickapps75.github.io/tasbeeh/</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <!-- Alternate language versions (both served on same URL via JS) -->
+    <xhtml:link rel="alternate" hreflang="ar" href="https://clickapps75.github.io/tasbeeh/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://clickapps75.github.io/tasbeeh/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clickapps75.github.io/tasbeeh/"/>
+    <!-- Screenshots for Google image search -->
+    <image:image>
+      <image:loc>https://clickapps75.github.io/tasbeeh/assets/screenshots/screen1.jpg</image:loc>
+      <image:title>Tasbeeh Counter — عداد التسبيح</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://clickapps75.github.io/tasbeeh/assets/screenshots/screen2.jpg</image:loc>
+      <image:title>Morning Azkar — أذكار الصباح</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://clickapps75.github.io/tasbeeh/assets/screenshots/screen3.jpg</image:loc>
+      <image:title>Prayer Times — أوقات الصلاة</image:title>
+    </image:image>
+  </url>
+
+  <!-- Privacy Policy -->
+  <url>
+    <loc>https://clickapps75.github.io/tasbeeh/privacy.html</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+  <!-- Terms of Service -->
+  <url>
+    <loc>https://clickapps75.github.io/tasbeeh/terms.html</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+</urlset>
